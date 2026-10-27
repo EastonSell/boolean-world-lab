@@ -13,6 +13,11 @@ L times 2^{O_k(n(log log n)^2/sqrt(log n))}, and polynomial tape-space usage.
 It separately attributes a sharper general-clause and sparse-clause bound to
 the October 25 manuscript. Do not describe the sharper bound as Lean-verified
 on the basis of this note. We did not run the Lean build.
+The linked comparator is a statement artifact ending in `sorry`, not by itself
+a checked proof of the theorem. Our formal-status description reports the
+repository scope note, not an independent verification of the proof. Its literal
+indices are unary: translating our O(N)-clause formula into that canonical
+encoding can cost O(N^2) bits, still polynomial.
 
 ## Manuscript location
 https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf

@@ -32,8 +32,12 @@ extension must have precisely those values by induction through the gate order.
 It survives the final clause if and only if the event is true. Thus projection
 onto input variables is a bijection, including when input bits are unused.
 There are N variables and at most four clauses per gate plus one output clause.
-Literal-index encoding costs O((n+g+1) log(n+g+2)) bits, not necessarily linear
-bit length. This is a linear *variable/clause* reduction. The syntax requires
+A compact binary literal-index encoding costs O((n+g+1) log(n+g+2)) bits,
+not necessarily linear bit length. The external formal comparator instead uses
+unary literal indices: re-encoding O(N) clauses of width at most three costs
+O(N^2) bits. This is still polynomial and does not change the stated
+subexponential-in-N transfer. This is a linear *variable/clause* reduction,
+not a claim of linear bit length in the comparator encoding. The syntax requires
 at least one wire; n=0 is supported by constant-containing circuits.
 
 ## Proof of counting and unranking
