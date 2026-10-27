@@ -73,7 +73,7 @@ from contrasting literal inspections with gates.
 
 ## Mathematical result and limits
 The elementary [cache theorem](AMORTIZATION.md) gives at most
-**1+min(Kn,2**n−1)** count calls for K samples, or one call for impossible evidence.
+**1 + min(Kn, 2ⁿ − 1)** count calls for K samples, or one call for impossible evidence.
 It preserves exactness under ideal uniform ranks, and exposes both query cost
 and storage rather than treating an exact counter as free. This is an auditable
 extension of known self-reduction, not a novel counting-complexity result.
