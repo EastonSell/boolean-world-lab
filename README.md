@@ -35,6 +35,7 @@ print(w.cnf.dimacs())
   enter the probability denominator.
 - Impossible evidence raises `ImpossibleEvent`; no fallback samples are invented.
 - The counter is exponential Python reference code: only small instances.
+  Deep formulas can hit Python's recursion limit; this is not a scalable solver API.
 - Exactness is a distributional statement under a uniform integer RNG;
   `random.Random(seed)` is useful for tests, not cryptographic or physical randomness.
 - No empirical speedup, physical-world universality, or theorem novelty is claimed.

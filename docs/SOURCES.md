@@ -17,9 +17,11 @@ on the basis of this note. We did not run the Lean build.
 ## Manuscript location
 https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf
 
-The scope note attributes time (n+m)^{O_k(1)} times
+The manuscript was also read directly from its downloaded PDF text: Theorem 1.1
+(page 2), its immediate self-reduction paragraph, and the introduction's declared-variable convention (page 1). Theorem 1.1 states time (n+m)^{O_k(1)} times
 2^{O_k(n log log n/sqrt(log n))} to this manuscript and, for m<=Dn,
 (n+m)^{O_{k,D}(1)} times 2^{O_{k,D}(n/sqrt(log n))}.
+It permits shorter clauses by repeating literals, without adding variables.
 The PDF is a separate source from the formalization scope note. Its complete
 proof is not verified by this artifact. None of the Python code implements
 these algorithms, and no empirical result here tests these bounds.

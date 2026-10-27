@@ -51,6 +51,17 @@ class Tests(unittest.TestCase):
         self.assertEqual(CNF(3,()).count({1:True}),4)
         for n in range(1,9): self.assertEqual(World(all_true(n)).count(),1)
 
+    def test_false_variants(self):
+        c = Circuit(1,(('NOT',(1,)),),2)
+        w = World(c)
+        self.assertEqual(w.probability(),Fraction(1,2))
+        self.assertNotEqual(w.probability(),Fraction(w.count(),2**w.cnf.n_variables))
+        # z => x alone admits two auxiliaries when event x is true.
+        one_way = CNF(2,((-2,1),(1,)))
+        proper = World(Circuit(1,(('AND',(1,1)),),1))
+        self.assertEqual(one_way.count(),2)
+        self.assertEqual(proper.count(),1)
+
     def test_invalid(self):
         for args in [(-1,(),1),(1,(('AND',(1,2)),),2),(1,(('WHAT',()),),2),(1,(),0)]:
             with self.assertRaises(ValueError): Circuit(*args)

@@ -77,11 +77,9 @@ itself are external dependencies; our tiny Python tests do not establish them.
 ## False tempting variants, with witnesses
 1. **Divide by 2^N:** n=1 and z=NOT(x), event z, gives #F=1, N=2.
    Correct event probability is 1/2, not 1/4. Auxiliary variables are not randomness.
-2. **One-way gate constraints preserve counts:** n=1, z=NOT(x), event x.
-   If only z=>NOT(x) is encoded, accepted x=true forces z=false (one extension),
-   but use event NOT(x) instead: x=false permits either z value without an
-   equality constraint. More directly, n=1, z=AND(x,x), event x, with only
-   z=>x and asserted x has two satisfying extensions instead of one.
+2. **One-way gate constraints preserve counts:** n=1, z=AND(x,x), event x.
+   Keeping only z=>x and asserting x admits two extensions (z=false/true)
+   instead of the single extension z=true required by gate equality.
 3. **Ignore unused inputs:** event x1 among eight fair bits accepts 128 worlds,
    not one. Its denominator is 256. Projection without multiplicity changes counts.
 4. **Condition on zero probability:** FALSE event has zero count, hence no
