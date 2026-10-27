@@ -40,3 +40,12 @@ print(w.cnf.dimacs())
   `random.Random(seed)` is useful for tests, not cryptographic or physical randomness.
 - No empirical speedup, physical-world universality, or theorem novelty is claimed.
 - Quantum amplitude/sign cancellation is a distinct problem, not represented here.
+
+## Repeated-sampling comparison
+The [preregistered full-grid comparison](docs/COMPARISON_PROTOCOL.md) now compares
+cached count-guided sampling, direct enumeration, and capped rejection.
+[Results and limits](docs/COMPARISON_RESULTS.md) include all 405 method rows,
+partial outputs and failures; [the elementary amortization proof](docs/AMORTIZATION.md)
+accounts for repeat-query reuse without treating an exact counter as free.
+Run `python compare.py` (standard library only). This is a reference comparison,
+not a runtime-speedup claim or the external subexponential counting algorithm.

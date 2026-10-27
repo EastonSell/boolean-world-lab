@@ -1,0 +1,78 @@
+{
+  "protocol_commit": "995c9d8",
+  "protocol_sha256": "8a9e4065c03d8db9ea85a1894f01878b5756917bc6a68bcaacf136e60ff50e56",
+  "source_commit": "a9ac2829b02c10335b7a3f9463fe56e5467ba2a4",
+  "python": "3.12.14",
+  "planned_cells": 135,
+  "planned_method_rows": 405,
+  "completed_cells": 135,
+  "validation_errors": [],
+  "summaries": {
+    "conditional": {
+      "rows": 135,
+      "statuses": {
+        "complete": 108,
+        "impossible": 27
+      },
+      "requested": 3645,
+      "produced": 2916,
+      "work_totals": {
+        "count_calls": 6993,
+        "recursive_visits": 849731,
+        "restriction_calls": 896547,
+        "clauses_scanned": 6246661,
+        "literal_inspections": 25546130,
+        "empty_clause_checks": 3133898,
+        "evaluated_inputs": 0,
+        "evaluated_gates": 0,
+        "generated_input_bits": 0,
+        "rank_requests": 2916,
+        "compiled_literals": 3780
+      }
+    },
+    "enumeration": {
+      "rows": 135,
+      "statuses": {
+        "complete": 108,
+        "impossible": 27
+      },
+      "requested": 3645,
+      "produced": 2916,
+      "work_totals": {
+        "count_calls": 0,
+        "recursive_visits": 0,
+        "restriction_calls": 0,
+        "clauses_scanned": 0,
+        "literal_inspections": 0,
+        "empty_clause_checks": 0,
+        "evaluated_inputs": 196560,
+        "evaluated_gates": 922752,
+        "generated_input_bits": 0,
+        "rank_requests": 2916,
+        "compiled_literals": 0
+      }
+    },
+    "rejection": {
+      "rows": 135,
+      "statuses": {
+        "complete": 96,
+        "budget_exhausted": 39
+      },
+      "requested": 3645,
+      "produced": 2529,
+      "work_totals": {
+        "count_calls": 0,
+        "recursive_visits": 0,
+        "restriction_calls": 0,
+        "clauses_scanned": 0,
+        "literal_inspections": 0,
+        "empty_clause_checks": 0,
+        "evaluated_inputs": 176853,
+        "evaluated_gates": 682480,
+        "generated_input_bits": 1536948,
+        "rank_requests": 0,
+        "compiled_literals": 0
+      }
+    }
+  }
+}
