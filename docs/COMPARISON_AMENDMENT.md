@@ -12,3 +12,9 @@ verification rerun cannot overwrite the original preregistered result. This is
 a reporting robustness fix, not a changed hypothesis, grid, sampler, accounting
 rule or analysis. The amended verification is saved separately in
 results/comparison-amended.json and is compared with original rows and summaries.
+
+Verification: all 405 method rows, summaries and validation results reproduced
+exactly; both original evidence files match commit 1175960 byte-for-byte.
+All 11 tests pass, including the new forced-total-failure regression; compilation
+passes. The amended runner source was frozen at e18b260 before its verification
+rerun. Independent re-review is required before publication.
