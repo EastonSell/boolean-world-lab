@@ -1,0 +1,81 @@
+test_compiler_agrees_independent_execution (test_observer_world.ObserverTests.test_compiler_agrees_independent_execution) ... ERROR
+test_forward_feedback (test_observer_world.ObserverTests.test_forward_feedback) ... FAIL
+test_full_rank_transcript_distribution (test_observer_world.ObserverTests.test_full_rank_transcript_distribution) ... ERROR
+test_impossible (test_observer_world.ObserverTests.test_impossible) ... ERROR
+test_invalid_parameters (test_observer_world.ObserverTests.test_invalid_parameters) ... ERROR
+test_unused_bit_preserves_multiplicity (test_observer_world.ObserverTests.test_unused_bit_preserves_multiplicity) ... ERROR
+
+======================================================================
+ERROR: test_compiler_agrees_independent_execution (test_observer_world.ObserverTests.test_compiler_agrees_independent_execution)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/shared/simulation-feasibility-20261027/tests/test_observer_world.py", line 12, in test_compiler_agrees_independent_execution
+    c=ow.compile_world(steps,event)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/shared/simulation-feasibility-20261027/observer_world.py", line 7, in compile_world
+    raise NotImplementedError('compiler not implemented')
+NotImplementedError: compiler not implemented
+
+======================================================================
+ERROR: test_full_rank_transcript_distribution (test_observer_world.ObserverTests.test_full_rank_transcript_distribution)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/shared/simulation-feasibility-20261027/tests/test_observer_world.py", line 30, in test_full_rank_transcript_distribution
+    steps=3; w=World(ow.compile_world(steps,event))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/shared/simulation-feasibility-20261027/observer_world.py", line 7, in compile_world
+    raise NotImplementedError('compiler not implemented')
+NotImplementedError: compiler not implemented
+
+======================================================================
+ERROR: test_impossible (test_observer_world.ObserverTests.test_impossible)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/shared/simulation-feasibility-20261027/tests/test_observer_world.py", line 20, in test_impossible
+    w=World(ow.compile_world(2,'impossible'))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/shared/simulation-feasibility-20261027/observer_world.py", line 7, in compile_world
+    raise NotImplementedError('compiler not implemented')
+NotImplementedError: compiler not implemented
+
+======================================================================
+ERROR: test_invalid_parameters (test_observer_world.ObserverTests.test_invalid_parameters)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/shared/simulation-feasibility-20261027/tests/test_observer_world.py", line 25, in test_invalid_parameters
+    with self.assertRaises(ValueError): ow.compile_world(steps,'none')
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/shared/simulation-feasibility-20261027/observer_world.py", line 7, in compile_world
+    raise NotImplementedError('compiler not implemented')
+NotImplementedError: compiler not implemented
+
+======================================================================
+ERROR: test_unused_bit_preserves_multiplicity (test_observer_world.ObserverTests.test_unused_bit_preserves_multiplicity)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/shared/simulation-feasibility-20261027/tests/test_observer_world.py", line 16, in test_unused_bit_preserves_multiplicity
+    w=World(ow.compile_world(2,'all_observations_true'))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/shared/simulation-feasibility-20261027/observer_world.py", line 7, in compile_world
+    raise NotImplementedError('compiler not implemented')
+NotImplementedError: compiler not implemented
+
+======================================================================
+FAIL: test_forward_feedback (test_observer_world.ObserverTests.test_forward_feedback)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/shared/simulation-feasibility-20261027/tests/test_observer_world.py", line 8, in test_forward_feedback
+    self.assertEqual(ow.forward((True,False,True)), ((True,True),(False,True),(False,True)))
+AssertionError: Tuples differ: () != ((True, True), (False, True), (False, True))
+
+Second tuple contains 3 additional elements.
+First extra element 0:
+(True, True)
+
+- ()
++ ((True, True), (False, True), (False, True))
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.002s
+
+FAILED (failures=1, errors=5)

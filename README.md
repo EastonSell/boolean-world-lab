@@ -55,3 +55,9 @@ not a runtime-speedup claim or the external subexponential counting algorithm.
 [Sharp occupancy bounds and variable-order limitations](research/cache-occupancy/PUBLICATION.md)
 extend the uncompressed-cache analysis. Exact finite checks, original and amended
 evidence, and provenance are retained; literature novelty is unestablished.
+
+## Bounded observer feasibility
+
+[Observer-world study and publication provenance](research/observer-feasibility/PUBLICATION.md):
+16 finite cases with exact transcript agreement and retained negative performance
+results. This is not evidence that reality is simulated or a scalability result.

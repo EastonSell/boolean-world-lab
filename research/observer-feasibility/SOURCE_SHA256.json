@@ -1,0 +1,16 @@
+{
+  "README.md": "36cf7fabf429c10ec5153114daf52e13b00064b9d6264e5ae4cd9397e0f124fb",
+  "boolean_world.py": "33d4ee6eb34c68df30f310856a4537e297e8a284de05c75620c2a55f5e2fa3fc",
+  "docs/FEASIBILITY.md": "e54a038468240dcd5f90b27016835df432ab439557d7b7deee17a85218ea9a41",
+  "docs/PROTOCOL-AMENDMENT-1.md": "ea5b1f6441a48b9572e1334c64c58d6e4ca33b9dd6f10d918704d1cc5d0482db",
+  "docs/PROTOCOL.md": "88b69dbe9ad9325eaaec5b07d5c1a440c309d1f971fdffea0e4e383c91e1a767",
+  "docs/PROTOCOL.sha256": "0109bc9aacde0955370310a62705568ae7d15a7e158af8eeb5ea78dfd4b3d50e",
+  "docs/REVIEW.md": "1b4941334929d062a4b35c34cfaf2cced751a3f2bc7e2f5ba7daa0d0d08559ec",
+  "observer_world.py": "9f5e304f38c8681b4d935a98828a6fdba59b01ae57459f4b604c94b19ecb9ef2",
+  "results/source-hashes.json": "57d8ad3990ccd0875d04c57dc0cc445cf482bb9174a7f077714baa6136d2a416",
+  "results/study.json": "248811b94006345559b780be6c626c742b2496e16a2d7be859de2a9e3e64b9ad",
+  "run_study.py": "8d6d9e848938334b94fe171d60db3a38441bae5fdabf35864ba14f28010d81d5",
+  "tdd-green.log": "8f642ac4375e0bc2ab1bf519b28cd893ccc508da434dd7e697017c1b2b838acb",
+  "tdd-red.log": "8eabfb0081ea8d74702d94320561ac119257c6643e9f107900677df94d5075a4",
+  "tests/test_observer_world.py": "77dec79fc86787a2bbd622043eba9ce73cb7ded252f02d3977de9f47b6ca3a50"
+}

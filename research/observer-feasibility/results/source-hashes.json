@@ -1,0 +1,12 @@
+{
+  "collection": "Post-execution source snapshot; benchmark implementation sources unchanged since execution. Test runner main guard relocated afterward, without changing assertions. Not a pre-execution attestation.",
+  "collected_utc": "2026-10-27T20:57:01.895707+00:00",
+  "cpu_model": "AMD EPYC 9V74 80-Core Processor",
+  "sha256": {
+    "boolean_world.py": "33d4ee6eb34c68df30f310856a4537e297e8a284de05c75620c2a55f5e2fa3fc",
+    "observer_world.py": "9f5e304f38c8681b4d935a98828a6fdba59b01ae57459f4b604c94b19ecb9ef2",
+    "run_study.py": "8d6d9e848938334b94fe171d60db3a38441bae5fdabf35864ba14f28010d81d5",
+    "tests/test_observer_world.py": "77dec79fc86787a2bbd622043eba9ce73cb7ded252f02d3977de9f47b6ca3a50",
+    "docs/PROTOCOL.md": "88b69dbe9ad9325eaaec5b07d5c1a440c309d1f971fdffea0e4e383c91e1a767"
+  }
+}
