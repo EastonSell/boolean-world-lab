@@ -49,3 +49,9 @@ partial outputs and failures; [the elementary amortization proof](docs/AMORTIZAT
 accounts for repeat-query reuse without treating an exact counter as free.
 Run `python compare.py` (standard library only). This is a reference comparison,
 not a runtime-speedup claim or the external subexponential counting algorithm.
+
+## Cache occupancy analysis
+
+[Sharp occupancy bounds and variable-order limitations](research/cache-occupancy/PUBLICATION.md)
+extend the uncompressed-cache analysis. Exact finite checks, original and amended
+evidence, and provenance are retained; literature novelty is unestablished.

@@ -1,0 +1,20 @@
+{
+  "AMENDMENT-v2.md": "d7f4790cda959e2d84e5b48e42232c5d2943b94890c06bf47d3c45522a21c6d8",
+  "PROOF.md": "71f76a50c13a383f5eece8b5334dc78fc1a0832d73292e936bf5da1f578984ec",
+  "PROTOCOL.md": "a29508fe7b151ae019e473a12b9c2564f8990833f5f365366c96dd576978a8c9",
+  "README.md": "971345d67b8afffb7ea9c5e139e53cb392cc4aba6a281ea770d9e1992356deca",
+  "SOURCES.md": "2bc6d84bdb144d2ab64aea0bf5b40efa0551663563ecd8020dc1109ebd460c58",
+  "boolean_world.py": "33d4ee6eb34c68df30f310856a4537e297e8a284de05c75620c2a55f5e2fa3fc",
+  "check_occupancy.py": "d04345f1f36a68a1bca1d2001dabf1ac974043ca1d101ba1794f8fd52f7d075a",
+  "check_occupancy_v1.py": "b63ef846da5c888a235f31a2ca7e206a3c554c464b7d4d8d67e062ca37d77d88",
+  "comparison_baseline.py": "a9c8693f038a89e0eb1e92cc2dadc68462172b4db8339185d343e182d0f5ff45",
+  "console-v1.txt": "1c981561cbdad17e613789e205003dda816d53185a77dbcbf67cd49c293c42e2",
+  "console-v2.txt": "17955c168d977f81d2b29f0b417b2313f4dff3868ef55bad7a10bf2b1d35a597",
+  "fault-assertion-console.txt": "500b23f3fd7dadb22f714195ddeb752a450a9cda0f0687e51f85e50ccb46647d",
+  "fault-assertion.json": "4adc7fcc903f389342af01a631555356ed6cc38d171c648371ad848131259c8b",
+  "fault-exception-console.txt": "ce5dd16ff05ce817cce96ef6c78b20493a0fc6a1147bbd8a7cb3ab99f67005fd",
+  "fault-exception.json": "1cbe04746838cf9d29e9a4bd3ccbb6e93a02d7685fe5bd7d5a05aaab7b0b7417",
+  "reporting-fault-exits.txt": "8e95398885b2d2d5bf97b38590b0550bacea7e7a10cdf80331b365597f2a94e4",
+  "results-v1.json": "709d4ca732e84046d0e268100744c90066dc47ed4810a4b0b05e2ac6b9b9bba8",
+  "results-v2.json": "c54b6ffd84a72e79267dfb93ea568bd160f4200ec4da71cd6604bbc32c856dcb"
+}

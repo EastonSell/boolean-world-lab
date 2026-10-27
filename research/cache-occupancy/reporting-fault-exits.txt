@@ -1,0 +1,2 @@
+assertion_exit=1
+exception_exit=1
