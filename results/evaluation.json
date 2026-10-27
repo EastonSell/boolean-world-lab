@@ -1,0 +1,138 @@
+{
+  "purpose": "correctness only; no asymptotic or speedup evidence",
+  "rows": [
+    {
+      "case": "all_true_1",
+      "input_bits": 1,
+      "gates": 0,
+      "cnf_variables": 1,
+      "clauses": 1,
+      "count": 1,
+      "denominator": 2,
+      "oracle_count": 1,
+      "agrees": true,
+      "probability": "1/2"
+    },
+    {
+      "case": "all_true_2",
+      "input_bits": 2,
+      "gates": 1,
+      "cnf_variables": 3,
+      "clauses": 4,
+      "count": 1,
+      "denominator": 4,
+      "oracle_count": 1,
+      "agrees": true,
+      "probability": "1/4"
+    },
+    {
+      "case": "all_true_3",
+      "input_bits": 3,
+      "gates": 2,
+      "cnf_variables": 5,
+      "clauses": 7,
+      "count": 1,
+      "denominator": 8,
+      "oracle_count": 1,
+      "agrees": true,
+      "probability": "1/8"
+    },
+    {
+      "case": "all_true_4",
+      "input_bits": 4,
+      "gates": 3,
+      "cnf_variables": 7,
+      "clauses": 10,
+      "count": 1,
+      "denominator": 16,
+      "oracle_count": 1,
+      "agrees": true,
+      "probability": "1/16"
+    },
+    {
+      "case": "all_true_5",
+      "input_bits": 5,
+      "gates": 4,
+      "cnf_variables": 9,
+      "clauses": 13,
+      "count": 1,
+      "denominator": 32,
+      "oracle_count": 1,
+      "agrees": true,
+      "probability": "1/32"
+    },
+    {
+      "case": "all_true_6",
+      "input_bits": 6,
+      "gates": 5,
+      "cnf_variables": 11,
+      "clauses": 16,
+      "count": 1,
+      "denominator": 64,
+      "oracle_count": 1,
+      "agrees": true,
+      "probability": "1/64"
+    },
+    {
+      "case": "all_true_7",
+      "input_bits": 7,
+      "gates": 6,
+      "cnf_variables": 13,
+      "clauses": 19,
+      "count": 1,
+      "denominator": 128,
+      "oracle_count": 1,
+      "agrees": true,
+      "probability": "1/128"
+    },
+    {
+      "case": "all_true_8",
+      "input_bits": 8,
+      "gates": 7,
+      "cnf_variables": 15,
+      "clauses": 22,
+      "count": 1,
+      "denominator": 256,
+      "oracle_count": 1,
+      "agrees": true,
+      "probability": "1/256"
+    },
+    {
+      "case": "impossible",
+      "input_bits": 8,
+      "gates": 1,
+      "cnf_variables": 9,
+      "clauses": 2,
+      "count": 0,
+      "denominator": 256,
+      "oracle_count": 0,
+      "agrees": true,
+      "probability": "0"
+    },
+    {
+      "case": "certain",
+      "input_bits": 8,
+      "gates": 1,
+      "cnf_variables": 9,
+      "clauses": 2,
+      "count": 256,
+      "denominator": 256,
+      "oracle_count": 256,
+      "agrees": true,
+      "probability": "1"
+    },
+    {
+      "case": "unused_bits",
+      "input_bits": 8,
+      "gates": 0,
+      "cnf_variables": 8,
+      "clauses": 1,
+      "count": 128,
+      "denominator": 256,
+      "oracle_count": 128,
+      "agrees": true,
+      "probability": "1/2"
+    }
+  ],
+  "all_agree": true
+}

@@ -1,0 +1,41 @@
+# Boolean World Lab
+
+An auditable **reference** implementation of fair-bit Boolean worlds:
+compile an explicit event circuit parsimoniously to width-at-most-3 CNF,
+count accepted worlds, compute exact event probabilities, and sample exactly
+from the conditional distribution using integer-rank self-reduction.
+
+**Resolved claim:** the compiler preserves counts with N=n+g variables and
+at most 4g+1 clauses; rank unranking is a bijection to accepted inputs.
+[Proof, assumptions, counterexamples and asymptotic boundary](docs/PROOF.md).
+This is a verified small-instance application of known techniques, **not a new
+counting theorem or a practical subexponential solver**. The external theorem
+is distinguished from its manuscript refinements in [SOURCES](docs/SOURCES.md).
+
+## Run (Python 3.10+, no dependencies)
+```sh
+python -m unittest discover -s tests -v
+python evaluate.py
+```
+The complete deterministic readout is [results/evaluation.json](results/evaluation.json).
+The [protocol](docs/PROTOCOL.md) was committed before implementation/evaluation.
+
+```python
+from boolean_world import World, all_true
+w = World(all_true(8))
+assert w.count() == 1
+assert str(w.probability()) == '1/256'
+assert w.sample() == (True,) * 8
+print(w.cnf.dimacs())
+```
+
+## Boundaries
+- Inputs must be independent fair bits. Outputs are deterministic acyclic gates.
+- All declared input bits count, including unused ones. Gate auxiliaries do not
+  enter the probability denominator.
+- Impossible evidence raises `ImpossibleEvent`; no fallback samples are invented.
+- The counter is exponential Python reference code: only small instances.
+- Exactness is a distributional statement under a uniform integer RNG;
+  `random.Random(seed)` is useful for tests, not cryptographic or physical randomness.
+- No empirical speedup, physical-world universality, or theorem novelty is claimed.
+- Quantum amplitude/sign cancellation is a distinct problem, not represented here.
