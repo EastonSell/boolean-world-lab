@@ -65,3 +65,29 @@ class ComparisonTests(unittest.TestCase):
             self.assertEqual(work.generated_input_bits, 28)
             self.assertTrue(all(c.evaluate(x) for x in rejected))
             if family == 'impossible': self.assertEqual(rejected, [])
+
+    def test_runner_retains_all_cell_failures(self):
+        import contextlib
+        import io
+        import json
+        from pathlib import Path
+        import tempfile
+        from unittest.mock import patch
+        import compare
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root/'results').mkdir()
+            with patch.object(compare, 'ROOT', root), \
+                 patch.object(compare, 'family_circuit', side_effect=RuntimeError('forced failure')), \
+                 patch.object(compare, 'sha', return_value='0'*64), \
+                 patch.object(compare.subprocess, 'check_output', return_value='test-commit'), \
+                 contextlib.redirect_stdout(io.StringIO()):
+                with self.assertRaises(SystemExit):
+                    compare.run()
+            output = json.loads((root/'results/comparison.json').read_text())
+            self.assertEqual(len(output['validation_errors']), 135)
+            self.assertEqual(output['completed_cells'], 0)
+            self.assertEqual(output['rows'], [])
+            for summary in output['summaries'].values():
+                self.assertEqual(summary['rows'], 0)
+                self.assertTrue(all(v == 0 for v in summary['work_totals'].values()))

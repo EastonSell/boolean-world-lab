@@ -1,0 +1,14 @@
+# Post-evaluation robustness amendment
+
+Independent review found that the runner built summary counter names from its
+last successful sampler. If every cell failed before sampler creation, this
+would raise UnboundLocalError instead of saving the planned failure artifact.
+This does not affect the original run (all 135 cells succeeded), whose frozen
+results/comparison.json and comparison-console.json remain byte-for-byte intact.
+
+The amendment derives summary names from the Work schema directly, adds a test
+forcing all 135 cells to fail, and allows a separate output filename so a
+verification rerun cannot overwrite the original preregistered result. This is
+a reporting robustness fix, not a changed hypothesis, grid, sampler, accounting
+rule or analysis. The amended verification is saved separately in
+results/comparison-amended.json and is compared with original rows and summaries.

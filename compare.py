@@ -9,14 +9,14 @@ from pathlib import Path
 import platform
 import random
 import subprocess
-from comparison import CachedSampler, enumerate_sample, rejection_sample, family_circuit
+from comparison import Work, CachedSampler, enumerate_sample, rejection_sample, family_circuit
 
 ROOT = Path(__file__).resolve().parent
 
 def sha(path):
     return hashlib.sha256((ROOT/path).read_bytes()).hexdigest()
 
-def run():
+def run(output_name="comparison.json"):
     rows, errors = [], []
     for n, family, k, seed in product((4,8,12), ('certain','impossible','first_bit','all_true','parity'), (1,16,64), (0,1,2)):
         base = dict(n=n, family=family, requested=k, seed=seed)
@@ -54,15 +54,15 @@ def run():
         subset = [r for r in rows if r['method'] == method]
         summaries[method] = dict(rows=len(subset), statuses=dict(Counter(r['status'] for r in subset)),
             requested=sum(r['requested'] for r in subset), produced=sum(r['produced'] for r in subset),
-            work_totals={key:sum(r['work'][key] for r in subset) for key in asdict(sampler.work)})
+            work_totals={key:sum(r['work'][key] for r in subset) for key in asdict(Work())})
     output = dict(protocol_commit='995c9d8', protocol_sha256=sha('docs/COMPARISON_PROTOCOL.md'),
         source_commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),
         source_hashes={p:sha(p) for p in ('boolean_world.py','comparison.py','compare.py','tests/test_comparison.py')},
         python=platform.python_version(), planned_cells=135, planned_method_rows=405,
         completed_cells=135-len(errors), validation_errors=errors, summaries=summaries, rows=rows)
-    (ROOT/'results/comparison.json').write_text(json.dumps(output,indent=2)+'\n')
+    (ROOT/'results'/output_name).write_text(json.dumps(output,indent=2)+'\n')
     print(json.dumps({k:v for k,v in output.items() if k not in ('rows','source_hashes')},indent=2))
     if errors or len(rows) != 405:
-        raise SystemExit('Comparison failed; full errors retained in results/comparison.json')
+        raise SystemExit(f'Comparison failed; full errors retained in results/{output_name}')
 
 if __name__ == '__main__': run()
