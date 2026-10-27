@@ -1,0 +1,16 @@
+test_edges (test_boolean_world.Tests.test_edges) ... ok
+test_false_variants (test_boolean_world.Tests.test_false_variants) ... ok
+test_invalid (test_boolean_world.Tests.test_invalid) ... ok
+test_primitives (test_boolean_world.Tests.test_primitives) ... ok
+test_random_circuits (test_boolean_world.Tests.test_random_circuits) ... ok
+test_counter_matches_reference_all_prefixes (test_comparison.ComparisonTests.test_counter_matches_reference_all_prefixes) ... ok
+test_exhaustive_unranking_and_cache (test_comparison.ComparisonTests.test_exhaustive_unranking_and_cache) ... ok
+test_instrumentation_hand_count (test_comparison.ComparisonTests.test_instrumentation_hand_count) ... ok
+test_method_status_accounting (test_comparison.ComparisonTests.test_method_status_accounting) ... ok
+test_runner_retains_all_cell_failures (test_comparison.ComparisonTests.test_runner_retains_all_cell_failures) ... ok
+test_zero_input_and_invalid (test_comparison.ComparisonTests.test_zero_input_and_invalid) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.205s
+
+OK

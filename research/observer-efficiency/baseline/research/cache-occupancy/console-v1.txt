@@ -1,0 +1,13 @@
+{
+  "protocol_sha256": "a29508fe7b151ae019e473a12b9c2564f8990833f5f365366c96dd576978a8c9",
+  "baseline_comparison_sha256": "a9c8693f038a89e0eb1e92cc2dadc68462172b4db8339185d343e182d0f5ff45",
+  "counts": {
+    "all_subset_envelope": 329045,
+    "trace_outputs": 28793,
+    "trace_expectation": 1096,
+    "extremizer_attainment": 2555,
+    "empty_boundary": 1
+  },
+  "failure_count": 0,
+  "failures": []
+}

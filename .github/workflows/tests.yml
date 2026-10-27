@@ -46,3 +46,24 @@ jobs:
               assert c['support_transcripts'] == expected // 2
               assert all(x['multiplicity'] == 2 for x in c['transcript_multiplicities'])
           PY
+      - name: Observer prefix reuse tests and evidence
+        working-directory: research/observer-efficiency
+        run: |
+          python -m unittest test_cached -v
+          python - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+          for name, digest in json.loads(Path('MANIFEST.sha256.json').read_text()).items():
+              assert hashlib.sha256(Path(name).read_bytes()).hexdigest() == digest, name
+          for name, digest in json.loads(Path('FREEZE.json').read_text())['sha256'].items():
+              assert hashlib.sha256(Path(name).read_bytes()).hexdigest() == digest, name
+          rows = [json.loads(line) for line in Path('results.jsonl').read_text().splitlines()]
+          assert len(rows) == len({(r['T'], r['event'], r['method']) for r in rows}) == 48
+          assert all(r['status'] == 'completed' for r in rows)
+          assert sum(r['impossible_error'] == 'ImpossibleEvent' for r in rows) == 8
+          for t in (2, 4, 6, 8):
+              for event in ('none', 'terminal_memory_true', 'all_observations_true', 'impossible'):
+                  group = [r for r in rows if (r['T'], r['event']) == (t, event)]
+                  assert {r['method'] for r in group} == {'forward', 'original', 'cached'}
+                  assert len({json.dumps([r['numerator'], r['denominator'], r['rows']]) for r in group}) == 1
+          PY

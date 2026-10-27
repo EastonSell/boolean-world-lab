@@ -61,3 +61,10 @@ evidence, and provenance are retained; literature novelty is unestablished.
 [Observer-world study and publication provenance](research/observer-feasibility/PUBLICATION.md):
 16 finite cases with exact transcript agreement and retained negative performance
 results. This is not evidence that reality is simulated or a scalability result.
+
+## Observer prefix-count reuse
+
+[Reviewed efficiency study](research/observer-efficiency/PUBLICATION.md): exact
+prefix reuse reduces redundant work in the 48-cell bounded comparison, but
+remains slower than direct forward enumeration. All original results and
+freeze provenance are retained; no external ETH algorithm is implemented.

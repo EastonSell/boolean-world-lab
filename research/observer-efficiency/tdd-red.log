@@ -1,0 +1,18 @@
+test_exact_ranks (test_cached.Tests.test_exact_ranks) ... skipped 'feature absent'
+test_feature_exists (test_cached.Tests.test_feature_exists) ... FAIL
+test_invalid_and_impossible (test_cached.Tests.test_invalid_and_impossible) ... skipped 'feature absent'
+test_reuse_and_isolation (test_cached.Tests.test_reuse_and_isolation) ... skipped 'feature absent'
+
+======================================================================
+FAIL: test_feature_exists (test_cached.Tests.test_feature_exists)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/shared/observer-efficiency-20261027/test_cached.py", line 11, in test_feature_exists
+    def test_feature_exists(self):self.assertIsNotNone(CachedWorld)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.001s
+
+FAILED (failures=1, skipped=3)

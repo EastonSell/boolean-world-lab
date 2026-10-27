@@ -1,0 +1,9 @@
+{
+  "frozen_utc": "2026-10-27T21:34:32.139604+00:00",
+  "sha256": {
+    "PROTOCOL.md": "3b77ec16311a40346d061b3ad77c1f1fa7ff23a212704ef557a8af82081362ce",
+    "cached_world.py": "e11b8e35a5bd1e3b41dc9b44456a7cc06cfa00c2743fd4f780c14c099776ed4f",
+    "evaluate_reuse.py": "66a48c8386e4f9c8b8937de00ef0956984a6ce6f88a1e2a8ad95d4d92988ffc7",
+    "test_cached.py": "59d00114984a18fe9624adf3e4e55da1a0d7a0fd601452c3e80b55f8600d449e"
+  }
+}

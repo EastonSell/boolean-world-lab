@@ -1,0 +1,9 @@
+test_exact_ranks (test_cached.Tests.test_exact_ranks) ... ok
+test_feature_exists (test_cached.Tests.test_feature_exists) ... ok
+test_invalid_and_impossible (test_cached.Tests.test_invalid_and_impossible) ... ok
+test_reuse_and_isolation (test_cached.Tests.test_reuse_and_isolation) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.057s
+
+OK

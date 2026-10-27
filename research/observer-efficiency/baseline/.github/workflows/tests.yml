@@ -1,0 +1,48 @@
+name: reference-checks
+on: [push, pull_request]
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s tests -v
+      - run: python evaluate.py > /tmp/evaluation.json && diff results/evaluation.json /tmp/evaluation.json
+      - name: Exact cache occupancy reproduction
+        working-directory: research/cache-occupancy
+        run: |
+          python check_occupancy.py /tmp/occupancy-ci.json
+          python - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+          for name, digest in json.loads(Path('SOURCE_SHA256.json').read_text()).items():
+              assert hashlib.sha256(Path(name).read_bytes()).hexdigest() == digest, name
+          actual = json.loads(Path('/tmp/occupancy-ci.json').read_text())
+          expected = json.loads(Path('results-v2.json').read_text())
+          assert actual == expected
+          PY
+      - name: Observer feasibility tests and retained evidence
+        working-directory: research/observer-feasibility
+        run: |
+          python -m unittest discover -s tests -v
+          python - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+          for name, digest in json.loads(Path('SOURCE_SHA256.json').read_text()).items():
+              assert hashlib.sha256(Path(name).read_bytes()).hexdigest() == digest, name
+          r = json.loads(Path('results/study.json').read_text())
+          assert len(r['cases']) == r['completed'] == r['case_denominator'] == 16
+          assert all(r[k] for k in ('H1', 'H2', 'H3', 'H4'))
+          assert len({(c['T'], c['event']) for c in r['cases']}) == 16
+          for c in r['cases']:
+              t = c['T']
+              expected = {'none': 2**(t+1), 'terminal_memory_true': 2**t, 'all_observations_true': 2, 'impossible': 0}[c['event']]
+              assert c['numerator'] == expected
+              assert c['count_equal'] and c['transcript_multiset_equal']
+              assert c['transcript_multiplicities'] == c['ranked_transcript_multiplicities']
+              assert c['count_calls'] == 1 + expected * (c['n'] + 1) + (expected == 0)
+              assert c['support_transcripts'] == expected // 2
+              assert all(x['multiplicity'] == 2 for x in c['transcript_multiplicities'])
+          PY

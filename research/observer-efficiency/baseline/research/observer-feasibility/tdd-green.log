@@ -1,0 +1,14 @@
+test_compiler_agrees_independent_execution (test_observer_world.ObserverTests.test_compiler_agrees_independent_execution) ... ok
+test_forward_feedback (test_observer_world.ObserverTests.test_forward_feedback) ... ok
+test_full_rank_transcript_distribution (test_observer_world.ObserverTests.test_full_rank_transcript_distribution) ... ok
+test_impossible (test_observer_world.ObserverTests.test_impossible) ... ok
+test_invalid_parameters (test_observer_world.ObserverTests.test_invalid_parameters) ... ok
+test_unused_bit_preserves_multiplicity (test_observer_world.ObserverTests.test_unused_bit_preserves_multiplicity) ... ok
+test_bad_event_type (test_observer_world.RegressionTests.test_bad_event_type) ... ok
+test_bad_tape_type (test_observer_world.RegressionTests.test_bad_tape_type) ... ok
+test_exact_denominators_and_counts (test_observer_world.RegressionTests.test_exact_denominators_and_counts) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.060s
+
+OK

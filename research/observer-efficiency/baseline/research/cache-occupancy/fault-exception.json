@@ -1,0 +1,15 @@
+{
+  "failures": [],
+  "counts": {},
+  "block_illustrations": [],
+  "error": {
+    "type": "RuntimeError",
+    "message": "injected reporting exception",
+    "traceback": "Traceback (most recent call last):\n  File \"/workspace/shared/boolean-occupancy-research/check_occupancy.py\", line 121, in main\n    run(sys.argv[2] if len(sys.argv)>2 else None)\n  File \"/workspace/shared/boolean-occupancy-research/check_occupancy.py\", line 66, in run\n    raise RuntimeError(\"injected reporting exception\")\nRuntimeError: injected reporting exception\n"
+  },
+  "protocol_sha256": "a29508fe7b151ae019e473a12b9c2564f8990833f5f365366c96dd576978a8c9",
+  "amendment_sha256": "d7f4790cda959e2d84e5b48e42232c5d2943b94890c06bf47d3c45522a21c6d8",
+  "script_sha256": "d04345f1f36a68a1bca1d2001dabf1ac974043ca1d101ba1794f8fd52f7d075a",
+  "baseline_comparison_sha256": "a9c8693f038a89e0eb1e92cc2dadc68462172b4db8339185d343e182d0f5ff45",
+  "failure_count": 0
+}

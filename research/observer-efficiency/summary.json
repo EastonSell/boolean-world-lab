@@ -1,0 +1,160 @@
+{
+  "planned_method_cells": 48,
+  "completed": 48,
+  "planned_comparisons": 16,
+  "exact_equal": 16,
+  "planned_impossible_probes": 8,
+  "impossible_errors": 8,
+  "wall_s": 71.8261358460004,
+  "repetitions": 1,
+  "host": {
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.41",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "cpu_count": 9,
+    "cpuinfo": "\t: AMD EPYC 9V74 80-Core Processor"
+  },
+  "limits": {
+    "method_cell_s": 60,
+    "address_space_MiB": 512,
+    "study_s": 600
+  },
+  "freeze": {
+    "frozen_utc": "2026-10-27T21:34:32.139604+00:00",
+    "sha256": {
+      "PROTOCOL.md": "3b77ec16311a40346d061b3ad77c1f1fa7ff23a212704ef557a8af82081362ce",
+      "cached_world.py": "e11b8e35a5bd1e3b41dc9b44456a7cc06cfa00c2743fd4f780c14c099776ed4f",
+      "evaluate_reuse.py": "66a48c8386e4f9c8b8937de00ef0956984a6ce6f88a1e2a8ad95d4d92988ffc7",
+      "test_cached.py": "59d00114984a18fe9624adf3e4e55da1a0d7a0fd601452c3e80b55f8600d449e"
+    }
+  },
+  "comparisons": [
+    {
+      "T": 2,
+      "event": "none",
+      "all_methods_complete": true,
+      "exact_equal": true,
+      "cached_vs_original_speedup": 2.583264975549096,
+      "cached_over_forward": 329.9654961002338
+    },
+    {
+      "T": 2,
+      "event": "terminal_memory_true",
+      "all_methods_complete": true,
+      "exact_equal": true,
+      "cached_vs_original_speedup": 5.956010797579754,
+      "cached_over_forward": 230.04175980248692
+    },
+    {
+      "T": 2,
+      "event": "all_observations_true",
+      "all_methods_complete": true,
+      "exact_equal": true,
+      "cached_vs_original_speedup": 0.5838659941596778,
+      "cached_over_forward": 416.5214022022841
+    },
+    {
+      "T": 2,
+      "event": "impossible",
+      "all_methods_complete": true,
+      "exact_equal": true,
+      "cached_vs_original_speedup": 0.9526097748639155,
+      "cached_over_forward": 40.071724812805876
+    },
+    {
+      "T": 4,
+      "event": "none",
+      "all_methods_complete": true,
+      "exact_equal": true,
+      "cached_vs_original_speedup": 10.99087239387471,
+      "cached_over_forward": 595.2845734212403
+    },
+    {
+      "T": 4,
+      "event": "terminal_memory_true",
+      "all_methods_complete": true,
+      "exact_equal": true,
+      "cached_vs_original_speedup": 5.452885048066324,
+      "cached_over_forward": 622.5361079154744
+    },
+    {
+      "T": 4,
+      "event": "all_observations_true",
+      "all_methods_complete": true,
+      "exact_equal": true,
+      "cached_vs_original_speedup": 3.3128369376309457,
+      "cached_over_forward": 186.84345707408053
+    },
+    {
+      "T": 4,
+      "event": "impossible",
+      "all_methods_complete": true,
+      "exact_equal": true,
+      "cached_vs_original_speedup": 2.577840583102167,
+      "cached_over_forward": 160.55245520181725
+    },
+    {
+      "T": 6,
+      "event": "none",
+      "all_methods_complete": true,
+      "exact_equal": true,
+      "cached_vs_original_speedup": 14.778879927639109,
+      "cached_over_forward": 1309.1033534259625
+    },
+    {
+      "T": 6,
+      "event": "terminal_memory_true",
+      "all_methods_complete": true,
+      "exact_equal": true,
+      "cached_vs_original_speedup": 10.914213170487866,
+      "cached_over_forward": 998.3035598088679
+    },
+    {
+      "T": 6,
+      "event": "all_observations_true",
+      "all_methods_complete": true,
+      "exact_equal": true,
+      "cached_vs_original_speedup": 2.641678194663885,
+      "cached_over_forward": 159.10571752911196
+    },
+    {
+      "T": 6,
+      "event": "impossible",
+      "all_methods_complete": true,
+      "exact_equal": true,
+      "cached_vs_original_speedup": 1.1728343529673162,
+      "cached_over_forward": 60.36801441937816
+    },
+    {
+      "T": 8,
+      "event": "none",
+      "all_methods_complete": true,
+      "exact_equal": true,
+      "cached_vs_original_speedup": 44.80842563889321,
+      "cached_over_forward": 462.933578475933
+    },
+    {
+      "T": 8,
+      "event": "terminal_memory_true",
+      "all_methods_complete": true,
+      "exact_equal": true,
+      "cached_vs_original_speedup": 24.660189166722308,
+      "cached_over_forward": 303.50865818000545
+    },
+    {
+      "T": 8,
+      "event": "all_observations_true",
+      "all_methods_complete": true,
+      "exact_equal": true,
+      "cached_vs_original_speedup": 3.6080759224096335,
+      "cached_over_forward": 132.02305735102092
+    },
+    {
+      "T": 8,
+      "event": "impossible",
+      "all_methods_complete": true,
+      "exact_equal": true,
+      "cached_vs_original_speedup": 0.9302655645895554,
+      "cached_over_forward": 61.56653053252576
+    }
+  ]
+}
